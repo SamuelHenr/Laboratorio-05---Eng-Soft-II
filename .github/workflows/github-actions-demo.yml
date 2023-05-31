@@ -3,7 +3,7 @@ name: Python package
 on: [push]
 
 jobs:
-  build1:
+  test_ubuntu:
 
     runs-on: ubuntu-latest
     strategy:
@@ -21,7 +21,7 @@ jobs:
         pip install pytest pytest-cov
         pytest
 
-  build2:
+  test_windows:
 
     runs-on: windows-latest
     strategy:
@@ -40,7 +40,7 @@ jobs:
         pytest
 
 
-  build3:
+  test_mac:
 
     runs-on: macos-latest
     strategy:
